@@ -1,17 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const board = document.getElementById('chessboard')
+document.addEventListener('DOMContentLoaded',
+    function () {
+        const board = document.getElementById('chessboard')
 
-    for (let row; row < 8; row++) {
-        for (let col; col < 8; col++) {
-            document.createElement('div')
+        for (let row = 0; row < 8; row++) {
+            for (let col = 0; col < 8; col++) {
+                let square = document.createElement('div')
 
-            if ((row + col) % 2 === 0) {
-                square.className = 'chessboard-square white-square'
-            } else {
-                square.className = 'chessboard-square black-square'
+                square.className =
+                    (row + col) % 2 === 0 ?
+                        'chessboard-square white-square' :
+                        'chessboard-square black-square'
+
+                board.appendChild(square)
             }
-
-            board.appendChild(square)
         }
+
+
     }
-})
+)
