@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">Página inicial</a>
+    <a href="./pagina-01.html">Faça um pedido</a>
+  </nav>
+
+  <form id="pedidoForm" action="pedirPizza" method="post">
+    <fieldset>
+      <legend>Escolha o tamanho da pizza:</legend>
+      <label><input type="radio" name="tamanho" value="pequena"> Pequena</label>
+      <label><input type="radio" name="tamanho" value="media"> Média</label>
+      <label><input type="radio" name="tamanho" value="grande"> Grande</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Ingredientes extras:</legend>
+      <label><input type="checkbox" name="ingredientes" value="mussarela"> Mussarela extra</label>
+      <label><input type="checkbox" name="ingredientes" value="calabresa"> Calabresa</label>
+      <label><input type="checkbox" name="ingredientes" value="cebola"> Cebola</label>
+      <label><input type="checkbox" name="ingredientes" value="pimentao"> Pimentão</label>
+      <label><input type="checkbox" name="ingredientes" value="azeitona"> Azeitona</label>
+      <label><input type="checkbox" name="ingredientes" value="bacon"> Bacon</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Escolha o tipo de massa:</legend>
+      <label><input type="radio" name="massa" value="fina"> Fina</label>
+      <label><input type="radio" name="massa" value="tradicional"> Tradicional</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Opções de bebida:</legend>
+      <select name="bebida">
+        <option value="coke">Coca-Cola</option>
+        <option value="sprite">Sprite</option>
+        <option value="fanta">Fanta</option>
+        <option value="agua">Água</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Informações para entrega:</legend>
+      <label>Endereço: <input type="text" name="endereco"></label>
+      <label>Cidade: <input type="text" name="cidade"></label>
+      <label>CEP: <input type="text" name="cep"></label>
+    </fieldset>
+
+    <button type="reset">Limpar</button>
+    <button type="submit">Enviar Pedido</button>
+  </form>
+
+  <script>
+    document.getElementById('pedidoForm').addEventListener('submit', function (e) {
+      // Impede o envio do formulário
+      e.preventDefault()
+
+      // Recupera os dados do formulário
+      var tamanho = document.querySelector('input[name="tamanho"]:checked').value
+      var massa = document.querySelector('input[name="massa"]:checked').value
+      var bebida = document.querySelector('select[name="bebida"]').value
+      var endereco = document.querySelector('input[name="endereco"]').value
+      var cidade = document.querySelector('input[name="cidade"]').value
+      var cep = document.querySelector('input[name="cep"]').value
+
+      // Constrói a mensagem com os ingredientes selecionados
+      var ingredientesSelecionados = []
+      document.querySelectorAll('input[name="ingredientes"]:checked').forEach(function (item) {
+        ingredientesSelecionados.push(item.value)
+      })
+      var ingredientesMsg = ingredientesSelecionados.join(", ")
+
+      // Monta a mensagem final
+      var mensagem = "Pedido realizado:\n"
+      mensagem += "Tamanho: " + tamanho + "\n"
+      mensagem += "Massa: " + massa + "\n"
+      mensagem += "Ingredientes: " + ingredientesMsg + "\n"
+      mensagem += "Bebida: " + bebida + "\n"
+      mensagem += "Entrega para: " + endereco + ", " + cidade + " - CEP: " + cep
+
+      // Exibe a mensagem
+      alert(mensagem)
+    });
+  </script>
+
+</body>
+
+</html>
