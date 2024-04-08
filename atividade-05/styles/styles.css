@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Remove a margem padrão do navegador */
+  font-family: 'Roboto', sans-serif;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+}
+
+.rodape {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.texto-rodape {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.icones a, .logos a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.icones i {
+  font-size: 24px;
+}
+
+.logos img {
+  width: 50px;
+  height: auto;
+}
