@@ -99,3 +99,12 @@ ul {
 li {
   float: left;
 }
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 15%;
+  height: 120px;
+}
