@@ -7,4 +7,5 @@ Projeto desenvolvido para a disciplina de Projeto de Interface do curso de Anál
 - [Atividade 3](atividade-03/index.html)
 - [Atividade 4](atividade-04/index.html)
 - [Atividade 5](atividade-05/index.html)
+- [Atividade 6](atividade-06/index.html)
 - [Extra (Xadrez)](my-chess/index.html)
