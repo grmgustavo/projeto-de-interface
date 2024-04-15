@@ -1,0 +1,27 @@
+@import url("../styles/style.css");
+
+.dicas-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dica {
+  background-color: #241a1c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.dica h3 {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  color: #e7a80e;
+}
+
+.dica p {
+  font-family: Inter;
+  font-size: 1rem;
+  color: #c7bab3;
+}

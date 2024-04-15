@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Turismo Sustentável</title>
+  <link rel="stylesheet" type="text/css" href="../styles/contato.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span class="logo">turismo sustentável</span>
+      <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./destinos.html">Destinos</a></li>
+        <li><a href="./dicas.html">Dicas</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+      </ul>
+      <a href="https://github.com/grmgustavo" class="github">github</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="principal">
+      <section class="contato">
+        <header>
+          <h2>Entre em contato conosco</h2>
+          <p>Preencha o formulário abaixo para nos enviar uma mensagem:</p>
+        </header>
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Informações de Contato</legend>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone">
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento">
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="brasil">Brasil</option>
+              <option value="eua">Estados Unidos</option>
+            </select>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado">
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep">
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <label for="como-conheceu">Como conheceu nosso site?</label>
+            <select id="como-conheceu" name="como-conheceu">
+              <option value="internet">Internet</option>
+              <option value="amigo">Amigo</option>
+            </select>
+
+            <label for="interesse">Área de Interesse:</label>
+            <select id="interesse" name="interesse">
+              <option value="turismo-ecologico">Turismo Ecológico</option>
+              <option value="turismo-aventura">Turismo de Aventura</option>
+            </select>
+
+            <label for="newsletter">Deseja receber nossa newsletter?</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+            <br>
+
+            <!-- <button type="submit">Enviar</button> -->
+            <button type="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-copy">&copy; 2024 Turismo Sustentável</p>
+    <p class="footer-autor">Feito pelo dev backend incrível <a href="https://github.com/grmgustavo">Gustavo Machado</a>
+    </p>
+    <img src="https://avatars.githubusercontent.com/u/61809841?v=4" alt="Gustavo Machado">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./destinos.html">Destinos</a></li>
+      <li><a href="./dicas.html">Dicas</a></li>
+      <li><a href="./contato.html">Contato</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>

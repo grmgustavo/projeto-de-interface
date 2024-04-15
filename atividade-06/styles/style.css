@@ -180,7 +180,7 @@ button {
 .destinos-card-container {
   padding: 0rem 10rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   column-count: 4;
   gap: 2rem;
@@ -204,6 +204,7 @@ button {
 }
 
 .destinos-card-cabecalho-detalhes {
+  max-width: 21rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -276,4 +277,10 @@ footer > ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 20rem;
 }
